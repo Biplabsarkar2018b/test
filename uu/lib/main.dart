@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uu/screens/login.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'screens/home_page.dart';
 
@@ -22,8 +23,11 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       // home: HomePage(),
       themeMode: ThemeMode.light,
+      theme: ThemeData(
+          primaryTextTheme: GoogleFonts.latoTextTheme(),
+          fontFamily: GoogleFonts.adventPro().fontFamily),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/home",
+      // initialRoute: "/home",
       routes: {
         "/": (context) => const LoginScreen(),
         "/login": (context) => const LoginScreen(),
